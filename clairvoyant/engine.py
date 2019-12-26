@@ -125,8 +125,10 @@ class Engine:
             if self.continueTraining:
                 X.append(Xs)     
                 
-                if change(data, i+1) > 0: y.append(1)
-                else:                     y.append(-1)
+                if helpers.change(data, i+1) > 0: 
+                    y.append(1)
+                else:
+                    y.append(-1)
                 
                 self.model.fit(X, y)
 
