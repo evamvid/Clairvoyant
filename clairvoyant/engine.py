@@ -125,7 +125,7 @@ class Engine:
             if self.continueTraining:
                 X.append(Xs)     
                 
-                if helpers.change(data, i+1) > 0: 
+                if helpers.change(data.iloc[i+1].open, data.iloc[i+1].close) > 0:
                     y.append(1)
                 else:
                     y.append(-1)
