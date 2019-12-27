@@ -54,8 +54,10 @@ class Engine:
             
             # Find the stock price movement for day 2
             y1 = helpers.change(data.iloc[i+1].open, data.iloc[i+1].close)
-            if y1 > 0: y.append(1)  # If it went up, classify as 1
-            else:      y.append(-1) # If it went down, classify as -1
+            if y1 > 0: 
+                y.append(1)  # If it went up, classify as 1
+            else:      
+                y.append(-1) # If it went down, classify as -1
         
         self.model.fit(X, y)
 
